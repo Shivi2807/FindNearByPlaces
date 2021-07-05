@@ -73,5 +73,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow access to camera to click your profile picture</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow access to photo library to choose a picture for your profile</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow access to your location to show it on the map</string>
 </dict>
 </plist>
