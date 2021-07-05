@@ -105,7 +105,27 @@ extension MainViewController: CLLocationManagerDelegate {
 extension MainViewController: UISearchResultsUpdating
 {
     func updateSearchResults(for searchController: UISearchController) {
-        //
+        guard let query = searchController.searchBar.text, !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              let resultsVC = searchController.searchResultsController as? SearchPlacesViewController else
+        {
+            return
+        }
+        
+        GooglePlacesManager.shared.findPlaces(query: query) { results in
+            switch results
+            {
+            case .success(let places):
+                print("found results")
+                print(places)
+                DispatchQueue.main.async {
+                    resultsVC.update(with: places)
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
     
