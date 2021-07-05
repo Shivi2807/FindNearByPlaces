@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		0FFFC19526936C0C00E1EF91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC19426936C0C00E1EF91 /* SceneDelegate.swift */; };
 		0FFFC19726936C0C00E1EF91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC19626936C0C00E1EF91 /* MainViewController.swift */; };
 		0FFFC19A26936C0C00E1EF91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFFC19826936C0C00E1EF91 /* Main.storyboard */; };
-		0FFFC19C26936C1100E1EF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFFC19B26936C1100E1EF91 /* Assets.xcassets */; };
 		0FFFC19F26936C1100E1EF91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFFC19D26936C1100E1EF91 /* LaunchScreen.storyboard */; };
 		0FFFC1AA26936C1200E1EF91 /* FindNearByPlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1A926936C1200E1EF91 /* FindNearByPlacesTests.swift */; };
 		0FFFC1B526936C1200E1EF91 /* FindNearByPlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1B426936C1200E1EF91 /* FindNearByPlacesUITests.swift */; };
@@ -24,6 +23,9 @@
 		0FFFC1CF26936CB300E1EF91 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1CE26936CB300E1EF91 /* StorageManager.swift */; };
 		0FFFC1D126936CC100E1EF91 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1D026936CC100E1EF91 /* GooglePlacesManager.swift */; };
 		0FFFC1D726936D2800E1EF91 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1D626936D2800E1EF91 /* ProfileViewModel.swift */; };
+		0FFFC1D92693701900E1EF91 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FFFC1D82693701900E1EF91 /* GoogleService-Info.plist */; };
+		0FFFC1DB269373BA00E1EF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FFFC1DA269373BA00E1EF91 /* Assets.xcassets */; };
+		0FFFC1DD2693752500E1EF91 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFC1DC2693752500E1EF91 /* Extensions.swift */; };
 		7B0B3A6C4FE64ECBCF56B272 /* Pods_FindNearByPlaces_FindNearByPlacesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAE439A101DCD69FD74A4B /* Pods_FindNearByPlaces_FindNearByPlacesUITests.framework */; };
 		D61A5D9CB51F9DD0D1A8A37F /* Pods_FindNearByPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016732C23F7BBFC554893129 /* Pods_FindNearByPlaces.framework */; };
 		DAB9647761CB0870B165ADCE /* Pods_FindNearByPlacesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AE8C2964CFBB9F24EF731E /* Pods_FindNearByPlacesTests.framework */; };
@@ -53,7 +55,6 @@
 		0FFFC19426936C0C00E1EF91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0FFFC19626936C0C00E1EF91 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0FFFC19926936C0C00E1EF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0FFFC19B26936C1100E1EF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FFFC19E26936C1100E1EF91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FFFC1A026936C1100E1EF91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FFFC1A526936C1200E1EF91 /* FindNearByPlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindNearByPlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +72,9 @@
 		0FFFC1CE26936CB300E1EF91 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		0FFFC1D026936CC100E1EF91 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		0FFFC1D626936D2800E1EF91 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0FFFC1D82693701900E1EF91 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FFFC1DA269373BA00E1EF91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FFFC1DC2693752500E1EF91 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1277B4E2CA3C14B5C37B5089 /* Pods-FindNearByPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindNearByPlaces.release.xcconfig"; path = "Target Support Files/Pods-FindNearByPlaces/Pods-FindNearByPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		47EF0D000692775A8A3809CF /* Pods-FindNearByPlaces-FindNearByPlacesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindNearByPlaces-FindNearByPlacesUITests.release.xcconfig"; path = "Target Support Files/Pods-FindNearByPlaces-FindNearByPlacesUITests/Pods-FindNearByPlaces-FindNearByPlacesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A956D08733193050E7C07D3 /* Pods-FindNearByPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindNearByPlaces.debug.xcconfig"; path = "Target Support Files/Pods-FindNearByPlaces/Pods-FindNearByPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				0FFFC1D526936D1900E1EF91 /* Model */,
 				0FFFC1D426936D0D00E1EF91 /* Views */,
 				0FFFC1A026936C1100E1EF91 /* Info.plist */,
+				0FFFC1D82693701900E1EF91 /* GoogleService-Info.plist */,
 				0FFFC1D226936CD700E1EF91 /* Controllers */,
 				0FFFC1D326936CF300E1EF91 /* Resources */,
 			);
@@ -182,7 +187,8 @@
 				0FFFC1D026936CC100E1EF91 /* GooglePlacesManager.swift */,
 				0FFFC19226936C0C00E1EF91 /* AppDelegate.swift */,
 				0FFFC19426936C0C00E1EF91 /* SceneDelegate.swift */,
-				0FFFC19B26936C1100E1EF91 /* Assets.xcassets */,
+				0FFFC1DA269373BA00E1EF91 /* Assets.xcassets */,
+				0FFFC1DC2693752500E1EF91 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -214,7 +220,6 @@
 				738A718BB8621E401DC45F96 /* Pods-FindNearByPlacesTests.debug.xcconfig */,
 				F84A86C166426B0D13122E96 /* Pods-FindNearByPlacesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -339,7 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FFFC19F26936C1100E1EF91 /* LaunchScreen.storyboard in Resources */,
-				0FFFC19C26936C1100E1EF91 /* Assets.xcassets in Resources */,
+				0FFFC1D92693701900E1EF91 /* GoogleService-Info.plist in Resources */,
+				0FFFC1DB269373BA00E1EF91 /* Assets.xcassets in Resources */,
 				0FFFC19A26936C0C00E1EF91 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +516,7 @@
 				0FFFC19326936C0C00E1EF91 /* AppDelegate.swift in Sources */,
 				0FFFC1D726936D2800E1EF91 /* ProfileViewModel.swift in Sources */,
 				0FFFC19526936C0C00E1EF91 /* SceneDelegate.swift in Sources */,
+				0FFFC1DD2693752500E1EF91 /* Extensions.swift in Sources */,
 				0FFFC1CB26936C9800E1EF91 /* SearchResultViewController.swift in Sources */,
 				0FFFC1CF26936CB300E1EF91 /* StorageManager.swift in Sources */,
 				0FFFC1C926936C8300E1EF91 /* SearchPlacesViewController.swift in Sources */,
