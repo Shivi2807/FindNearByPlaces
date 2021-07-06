@@ -116,7 +116,7 @@ extension MainViewController: UISearchResultsUpdating
             {
             case .success(let places):
                 print("found results")
-                print(places)
+                //print(places)
                 DispatchQueue.main.async {
                     resultsVC.update(with: places)
                 }
