@@ -29,36 +29,42 @@ class SearchResultViewController: UIViewController {
             return tbl
         }()
     
-    private let restaurantButton: UIButton =
+    private let mechanicsButton: UIButton =
         {
             let button = UIButton()
             //button.backgroundColor = .blue
-            button.setTitle("RESTAURANTS", for: .normal)
+            button.setTitle("MECHANICS", for: .normal)
             button.setTitleColor(.systemPink, for: .normal)
-            button.titleLabel?.font = UIFont(name: "GillSans-Italic", size: 15)
-            button.addTarget(self, action: #selector(didTapRestaurantButton), for: .touchUpInside)
+            button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 10)
+            //button.titleLabel?.minimumScaleFactor = 8.0
+            //button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.addTarget(self, action: #selector(didTapMechanicsButton), for: .touchUpInside)
             return button
         }()
     
-    private let loungebarButton: UIButton =
+    private let petrolPumpButton: UIButton =
         {
             let button = UIButton()
             //button.backgroundColor = .blue
-            button.setTitle("LOUNGE BARS", for: .normal)
+            button.setTitle("PETROL PUMPS", for: .normal)
             button.setTitleColor(.systemPink, for: .normal)
-            button.titleLabel?.font = UIFont(name: "GillSans-Italic", size: 15)
-            button.addTarget(self, action: #selector(didTapLoungeBarButton), for: .touchUpInside)
+            button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 10)
+            //button.titleLabel?.minimumScaleFactor = 8.0
+            //button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.addTarget(self, action: #selector(didTapPetrolPumpButton), for: .touchUpInside)
             return button
         }()
     
-    private let cafeButton: UIButton =
+    private let chargingStationButton: UIButton =
         {
             let button = UIButton()
             //button.backgroundColor = .blue
-            button.setTitle("CAFES", for: .normal)
+            button.setTitle("CHARGING STATIONS", for: .normal)
             button.setTitleColor(.systemPink, for: .normal)
-            button.titleLabel?.font = UIFont(name: "GillSans-Italic", size: 15)
-            button.addTarget(self, action: #selector(didTapCafeButton), for: .touchUpInside)
+            button.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 10)
+            //button.titleLabel?.minimumScaleFactor = 8.0
+            //button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.addTarget(self, action: #selector(didTapChargingStaionsButton), for: .touchUpInside)
             return button
         }()
     
@@ -82,10 +88,10 @@ class SearchResultViewController: UIViewController {
         view.addSubview(mapView)
         view.addSubview(view1)
         view.addSubview(tblView)
-        view1.addSubview(loungebarButton)
-        view1.addSubview(cafeButton)
-        view1.addSubview(restaurantButton)
-        fetchLocalData(category: "Bar")
+        view1.addSubview(petrolPumpButton)
+        view1.addSubview(chargingStationButton)
+        view1.addSubview(mechanicsButton)
+        fetchLocalData(category: "Petrol")
         tblView.delegate = self
         tblView.dataSource = self
         setConstraints()
@@ -134,53 +140,55 @@ class SearchResultViewController: UIViewController {
         //view1.height = view.height * 0.0
         constraints += [NSLayoutConstraint.init(item: view1, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 40)]
         
-        loungebarButton.translatesAutoresizingMaskIntoConstraints = false
+        petrolPumpButton.translatesAutoresizingMaskIntoConstraints = false
         
-        //loungeBarButton.leading = view1.leading
-        constraints += [NSLayoutConstraint.init(item: loungebarButton, attribute: .leading, relatedBy: .equal, toItem: view1, attribute: .leading, multiplier: 1.0, constant: 0.0)]
+        //petrolPumpButton.leading = view1.leading
+        constraints += [NSLayoutConstraint.init(item: petrolPumpButton, attribute: .leading, relatedBy: .equal, toItem: view1, attribute: .leading, multiplier: 1.0, constant: 0.0)]
         
-        //loungeBarButton.height = view1.height
+        //petrolPumpButton.height = view1.height
         
-        constraints += [NSLayoutConstraint.init(item: loungebarButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: petrolPumpButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
         
-        //loungeBarButton.bottom = view1.bottom
+        //petrolPumpButton.bottom = view1.bottom
         
-        constraints += [NSLayoutConstraint.init(item: loungebarButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: petrolPumpButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
         
-        //loungeBarButton.width = view1.width * 0.3
-        constraints += [NSLayoutConstraint.init(item: loungebarButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.3, constant: 0.0)]
+        //petrolPumpButton.width = view1.width * 0.3
+        constraints += [NSLayoutConstraint.init(item: petrolPumpButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.3, constant: 0.0)]
         
-        cafeButton.translatesAutoresizingMaskIntoConstraints = false
+        chargingStationButton.translatesAutoresizingMaskIntoConstraints = false
         
-        //cafeButton.leading = loungeBarButton.trailing + 12
-        constraints += [NSLayoutConstraint.init(item: cafeButton, attribute: .leading, relatedBy: .equal, toItem: loungebarButton, attribute: .trailing, multiplier: 1.0, constant: 12.0)]
+        //chargingStationButton.leading = petrolPunpButton.trailing + 12
+        constraints += [NSLayoutConstraint.init(item: chargingStationButton, attribute: .leading, relatedBy: .equal, toItem: petrolPumpButton, attribute: .trailing, multiplier: 1.0, constant: 12.0)]
         
-        //cafeButton.height = view1.height
+        //chargingStationButton.height = view1.height
         
-        constraints += [NSLayoutConstraint.init(item: cafeButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: chargingStationButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
         
-        //cafeButton.bottom = view1.bottom
+        //chargingStationButton.bottom = view1.bottom
         
-        constraints += [NSLayoutConstraint.init(item: cafeButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: chargingStationButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
         
-        //cafeButton.width = view1.width * 0.3
-        constraints += [NSLayoutConstraint.init(item: cafeButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.3, constant: 0.0)]
+        //chargingStationButton.width = view1.width * 0.35
+        constraints += [NSLayoutConstraint.init(item: chargingStationButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.35, constant: 0.0)]
         
-        restaurantButton.translatesAutoresizingMaskIntoConstraints = false
+        mechanicsButton.translatesAutoresizingMaskIntoConstraints = false
         
-        //restaurantButton.leading = cafeButton.trailing + 12
-        constraints += [NSLayoutConstraint.init(item: restaurantButton, attribute: .leading, relatedBy: .equal, toItem: cafeButton, attribute: .trailing, multiplier: 1.0, constant: 12.0)]
+        //mechanicsButton.leading = chargingStationButton.trailing + 12
+//        constraints += [NSLayoutConstraint.init(item: mechanicsButton, attribute: .leading, relatedBy: .equal, toItem: chargingStationButton, attribute: .trailing, multiplier: 1.0, constant: 12.0)]
         
-        //restaurantButton.height = view1.height
+        //mechanicsButton.height = view1.height
         
-        constraints += [NSLayoutConstraint.init(item: restaurantButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: mechanicsButton, attribute: .height, relatedBy: .equal, toItem: view1, attribute: .height, multiplier: 1.0, constant: 0.0)]
         
-        //restaurantButton.bottom = view1.bottom
+        //mechanicsButton.bottom = view1.bottom
         
-        constraints += [NSLayoutConstraint.init(item: restaurantButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
+        constraints += [NSLayoutConstraint.init(item: mechanicsButton, attribute: .bottom, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1.0, constant: 0.0)]
         
-        //restaurantButton.width = view1.width * 0.3
-        constraints += [NSLayoutConstraint.init(item: restaurantButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.3, constant: 0.0)]
+        //mechanicsButton.width = view1.width * 0.3
+        constraints += [NSLayoutConstraint.init(item: mechanicsButton, attribute: .width, relatedBy: .equal, toItem: view1, attribute: .width, multiplier: 0.3, constant: 0.0)]
+        
+        constraints += [NSLayoutConstraint.init(item: mechanicsButton, attribute: .trailing, relatedBy: .equal, toItem: view1, attribute: .trailing, multiplier: 1.0, constant: 0.0)]
         
         
         
@@ -219,19 +227,19 @@ class SearchResultViewController: UIViewController {
     }
     
     
-    @objc func didTapRestaurantButton()
+    @objc func didTapMechanicsButton()
     {
-        fetchLocalData(category: "Restaurants")
+        fetchLocalData(category: "Mechanic")
     }
     
-    @objc func didTapLoungeBarButton()
+    @objc func didTapPetrolPumpButton()
     {
-        fetchLocalData(category: "Bar")
+        fetchLocalData(category: "Petrol")
     }
     
-    @objc func didTapCafeButton()
+    @objc func didTapChargingStaionsButton()
     {
-        fetchLocalData(category: "Coffee")
+        fetchLocalData(category: "Charging")
     }
     
     func fetchLocalData(category: String) {
@@ -290,5 +298,9 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0
     }
 }
